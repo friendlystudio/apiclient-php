@@ -1623,4 +1623,13 @@ class RequestType
             'output' => 'string',
         );
     }
+
+    public function A2PSendSms()
+    {
+        return array (
+            'src_number' => 'string',
+            'dst_numbers' => 'array',
+            'text' => 'string',
+        );
+    }
 }

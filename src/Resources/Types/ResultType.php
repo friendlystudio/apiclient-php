@@ -35191,4 +35191,12 @@ class ResultType
             'total_count' => 'number',
         );
     }
+
+    public function A2PSendSms()
+    {
+        return array (
+            'result' => 'number',
+            'fragments_count' => 'number',
+        );
+    }
 }

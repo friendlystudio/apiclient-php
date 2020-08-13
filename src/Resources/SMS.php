@@ -61,4 +61,15 @@ class SMS implements SMSInterface
         }
         return $this->GetSmsHistoryReturn;
     }
+
+    /**
+     * @method Get history of sent and/or received SMS.
+     */
+    public function A2PSendSms(Params\A2PSendSmsParams $params = null): SendSmsMessageReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->SendSmsMessageReturn->$key = $value;
+        }
+        return $this->SendSmsMessageReturn;
+    }
 }
